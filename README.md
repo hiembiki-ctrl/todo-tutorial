@@ -7,6 +7,15 @@
 - 강의 본문: https://docs.claude-hunt.com
 - 수강생 결과물 공유: https://claude-hunt.com
 
+## 주요 기능
+
+- 할 일 추가 · 완료 토글 · 삭제
+- 우선순위(높음 / 보통 / 낮음), 마감일, 카테고리(업무 / 개인 / 쇼핑) 지정
+- 상태 필터(전체 / 진행중 / 완료)와 카테고리 필터
+- 검색, 정렬(생성일순 / 이름순 / 마감일순)
+- 브라우저 `localStorage` 에 할 일 목록 저장 (새로고침해도 유지)
+- 다크 모드 (`d` 키로 전환)
+
 ## 기술 스택
 
 - Next.js 16 (App Router, Turbopack)
@@ -18,7 +27,15 @@
 
 ## 시작하기
 
+### 사전 준비
+
+- [bun](https://bun.sh) 1.3.6 이상
+
+### 설치 및 실행
+
 ```bash
+git clone https://github.com/hiembiki-ctrl/todo-tutorial.git
+cd todo-tutorial
 bun install
 bun dev
 ```
@@ -34,6 +51,8 @@ bun run start      # 빌드 결과 실행
 bun run lint       # ESLint
 bun run typecheck  # tsc --noEmit
 bun run format     # Prettier 포맷팅
+bun run test       # Vitest 테스트 1회 실행
+bun run test:watch # Vitest 감시 모드
 ```
 
 ## 챕터별 시작 브랜치
